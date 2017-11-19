@@ -1,1 +1,1 @@
-My First Android Project, Misiu!
+My First Android Project, Misiu! Enjoy! :)
