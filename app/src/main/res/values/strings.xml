@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Keyboard</string>
+    <string name="www">www</string>
+    <string name="address">www.michal.audio</string>
 </resources>
