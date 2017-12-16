@@ -35,15 +35,13 @@
             android:text="@string/www"
             android:onClick="openWebsite"/>
 
-        <LinearLayout
-            android:orientation="horizontal"
+        <android.support.v7.widget.RecyclerView
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:id="@+id/keboard_linear_layout"
-            android:layout_below="@id/sounds">
+            android:layout_height="100dp"
+            android:layout_below="@id/sounds"
+            android:id="@+id/keyboard_recycler_view"/>
 
 
-        </LinearLayout>
 
 
     </RelativeLayout>
