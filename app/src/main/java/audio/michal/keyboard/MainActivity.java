@@ -10,23 +10,18 @@ import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
+    private KeyboardAdapter keyboardAdapter = new KeyboardAdapter();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        KeyboardAdapter ka = new KeyboardAdapter();
         RecyclerView rc = findViewById(R.id.keyboard_recycler_view);
         LinearLayoutManager ll = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         rc.setLayoutManager(ll);
-        rc.setAdapter(ka);
-//
-//
-//        List<KeyModel> list = new ArrayList<>();
-//        for (int i=0; i<2; i++){
-//            // for (KeyModel.Tone t: KeyModel.Tone.values()){
-//            //     KeyModel key = new KeyModel(i,)
-//            // }
-//        }
+        rc.setAdapter(keyboardAdapter);
+        KeyboardModel keyboardModel = KeyboardFactory.getGrandPiano();
+        keyboardAdapter.setKeyModels(keyboardModel.getKeyModels());
     }
 
     public void openWebsite(View view) {

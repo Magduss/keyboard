@@ -9,9 +9,7 @@ import java.util.List;
 
 public class KeyboardFactory {
 
-
-
-    public List<KeyModel> makeOctaves (int octavesNumber){
+    public static List<KeyModel> makeOctaves (int octavesNumber){
         int firstKey = 9;
         int lastKey = octavesNumber*12;
         KeyModel.Tone[] tones = KeyModel.Tone.values();
@@ -42,12 +40,12 @@ public class KeyboardFactory {
         return keyList;
     }
 
-    public KeyboardModel getGrandPiano(){
+    public static KeyboardModel getGrandPiano(){
         List<KeyModel> list = makeOctaves(8);
         return new KeyboardModel(list, "Grand Piano");
     }
 
-    public KeyboardModel getSynthesizer(){
+    public static KeyboardModel getSynthesizer(){
         List<KeyModel> list = makeOctaves(4);
         return new KeyboardModel(list, "Synthesizer");
     }

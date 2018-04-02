@@ -10,16 +10,16 @@ import java.util.List;
 
 public class KeyboardModel {
 
-    private List<KeyModel> list = new ArrayList<>();
+    private List<KeyModel> keyModels = new ArrayList<>();
     private String name;
 
-    public KeyboardModel(List<KeyModel> list, String name) {
-        this.list.addAll(list);
+    public KeyboardModel(List<KeyModel> keyModels, String name) {
+        this.keyModels.addAll(keyModels);
         this.name = name;
     }
 
-    public List<KeyModel> getList() {
-        return Collections.unmodifiableList(list);
+    public List<KeyModel> getKeyModels() {
+        return Collections.unmodifiableList(keyModels);
     }
 
     public String getName() {
